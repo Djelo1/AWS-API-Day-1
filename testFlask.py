@@ -9,10 +9,6 @@ employees = json.load(open("employees.json"))
 def index():
  return "<h1>hello my app</h1>"
 
-@app.route('/about')
-def about():
-    return jsonify('The about page')
-
 @app.route('/api/v1/employees',  methods=['GET'])
 def get():
     return jsonify(employees)
